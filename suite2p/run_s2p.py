@@ -367,13 +367,13 @@ def run_s2p(ops={}, db={}, server={}):
     
     if files_found_flag:
         print(f'FOUND BINARIES AND OPS IN {ops_paths}')
-        print('removing previous detection and extraction files, if present')
-        files_to_remove = ['stat.npy', 'F.npy', 'Fneu.npy', 'F_chan2.npy', 'Fneu_chan2.npy', 'iscell.npy', 'redcell.npy']
-        for p in ops_paths:
-            plane_folder = os.path.split(p)[0]
-            for f in files_to_remove:
-                if os.path.exists(os.path.join(plane_folder, f)):
-                    os.remove(os.path.join(plane_folder, f))
+        # print('removing previous detection and extraction files, if present')
+        # files_to_remove = ['stat.npy', 'F.npy', 'Fneu.npy', 'F_chan2.npy', 'Fneu_chan2.npy', 'iscell.npy', 'redcell.npy']
+        # for p in ops_paths:
+        #     plane_folder = os.path.split(p)[0]
+        #     for f in files_to_remove:
+        #         if os.path.exists(os.path.join(plane_folder, f)):
+        #             os.remove(os.path.join(plane_folder, f))
     # if not set up files and copy tiffs/h5py to binary
     else:
         if len(ops['h5py']):
